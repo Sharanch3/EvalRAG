@@ -1,0 +1,31 @@
+[project]
+name = "evalrag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "chromadb>=1.5.9",
+    "deepeval>=4.2.2",
+    "langchain>=1.4.0",
+    "langchain-chroma>=1.1.0",
+    "langchain-community>=0.4.2",
+    "langchain-openai>=1.6.1",
+    "langchain-pymupdf4llm>=1.28.0",
+    "langchain-text-splitters>=1.1.2",
+    "langgraph>=1.2.11",
+    "portalocker[win32]>=4.3.2",
+    "python-dotenv>=1.2.3",
+    "rank-bm25>=0.2.2",
+]
+
+[tool.ruff]
+line-length = 200
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

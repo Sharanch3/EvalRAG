@@ -1,0 +1,52 @@
+[
+  {
+    "id": "g001",
+    "input": "Why did Clawdbot change its name, and what did it eventually become?",
+    "expected_output": "Clawdbot was launched on November 24, 2025 with a lobster mascot named 'Clawd'. On January 27, 2026, Anthropic sent a trademark notice to creator Peter Steinberger requesting a name change because 'Clawd' was too similar to 'Claude'. The project rebranded within hours to 'Moltbot' (referencing how lobsters molt/shed their shells to grow). Just three days later, on January 30, 2026, it rebranded again to 'OpenClaw', even though the core codebase remained unchanged."
+  },
+  {
+    "id": "g002",
+    "input": "What messaging platforms and channels does Moltbot support?",
+    "expected_output": "Moltbot integrates natively with multiple messaging platforms so users can interact with it from any device: WhatsApp (via the Baileys protocol), Telegram, Discord, Slack, Signal, iMessage, Microsoft Teams, Matrix, WebChat, and macOS/iOS/Android apps."
+  },
+  {
+    "id": "g003",
+    "input": "What are the minimum and recommended hardware requirements to run Moltbot?",
+    "expected_output": "Minimum requirements are 4GB RAM, 10GB free storage, any modern processor, and a stable internet connection. Recommended specs are 8GB+ RAM, 20GB+ storage, a multi-core CPU, and broadband internet. It runs on any Mac (Intel or Apple Silicon), Windows (via WSL2), Linux, Raspberry Pi (4GB+ models), or VPS/cloud instances with at least 2GB RAM, and Node.js version 22 or higher is required."
+  },
+  {
+    "id": "g004",
+    "input": "How does Moltbot compare to ChatGPT and Claude in terms of features?",
+    "expected_output": "Unlike ChatGPT and Claude, Moltbot is self-hosted, open-source, offers full data privacy, executes real actions rather than just suggesting them, provides persistent memory, supports multi-channel messaging integration, and has a skills ecosystem (565+ skills) versus ChatGPT's limited plugin support and Claude's lack of one. Moltbot's cost is API-only, compared to $20/month for ChatGPT Plus or Claude Pro. However, ChatGPT and Claude offer zero-configuration access and official support, which Moltbot lacks."
+  },
+  {
+    "id": "g005",
+    "input": "What LLM providers and models can Moltbot use?",
+    "expected_output": "Moltbot is model-agnostic and supports Anthropic Claude (Sonnet, Opus), OpenAI GPT-4 and GPT-4 Turbo, Google Gemini, local models via Ollama, local models via LM Studio, and AWS Bedrock integration. Users can switch providers without reconfiguring their whole setup, though user reviews indicate Claude performs significantly better than GPT models for the assistant role."
+  },
+  {
+    "id": "g006",
+    "input": "How fast did Moltbot grow in popularity on GitHub?",
+    "expected_output": "Moltbot's growth was extremely rapid: it gained 9,000 stars in its first 24 hours after going viral, over 60,000 stars within 72 hours (January 24-27, 2026), and surpassed 103,000 stars within three months of launch. It gained 17,830 stars in a single 24-hour period (January 28-29, 2026), accumulated 14,400+ forks, and had 8,329+ commits. Daily forks jumped from 50 to 3,000 on January 24, 2026, and it trended #1 on GitHub multiple times in late January 2026."
+  },
+  {
+    "id": "g007",
+    "input": "What deployment options are available for Moltbot, and what are the tradeoffs between local and cloud hosting?",
+    "expected_output": "Moltbot can be deployed locally on a Mac/PC (no hardware cost), on a dedicated Mac Mini ($500-800 one-time), on a VPS like DigitalOcean or Linode ($5-24/month), on a Raspberry Pi ($50-100 one-time), or via Docker. Cloud deployment offers 24/7 availability, better reliability, easier remote access, and scalability, but the provider has theoretical access to data and credentials. Local deployment offers maximum privacy, zero recurring costs, lower latency, and full control, but depends on physical hardware security and is vulnerable to malware or home network breaches. Experts recommend a hybrid approach: VPS for automated workflows and local deployment for sensitive personal tasks."
+  },
+  {
+    "id": "g008",
+    "input": "What did security experts say about the risks of running Moltbot?",
+    "expected_output": "Security experts issued strong warnings. Heather Adkins, Google Cloud VP of Security Engineering, said: 'My threat model is not your threat model, but it should be. Don't run Clawdbot.' Eric Schwake of Salt Security noted a significant gap between consumer enthusiasm for its one-click appeal and the technical expertise needed to operate a secure agentic gateway. A Hacker News discussion called it 'terrifying' due to the lack of directory sandboxing, and one researcher characterized it as 'infostealer malware disguised as an AI personal assistant.'"
+  },
+  {
+    "id": "g009",
+    "input": "How much does it typically cost to run Moltbot per month?",
+    "expected_output": "Monthly costs for Moltbot are estimated at $5-10 for low usage and up to $64 for heavy usage. This includes LLM API costs (Claude/GPT: $5-30/month), optional VPS hosting ($0-24/month), and additional service APIs ($0-10/month). By comparison, ChatGPT Plus, Claude Pro, and Zapier Professional each cost about $20/month, and GitHub Copilot costs $10/month."
+  },
+  {
+    "id": "g010",
+    "input": "What is the ClawdHub skills marketplace and what categories of skills does it offer?",
+    "expected_output": "ClawdHub is Moltbot's community-developed skills marketplace, offering 565+ skills built on the open AgentSkills standard. Categories include Development (GitHub integration, CI/CD monitoring, code review), Productivity (Gmail, Google Calendar, Todoist, Asana), Health (WHOOP data analysis, meditation generation), Finance (portfolio tracking, expense categorization), Smart Home (Philips Hue, IoT control), and Content (blog automation, social media management). However, there is no rigorous code review or security vetting process for submitted skills."
+  }
+]

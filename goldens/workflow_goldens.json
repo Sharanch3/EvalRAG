@@ -1,0 +1,42 @@
+[
+  {
+    "id": "g001",
+    "input": "Why did Clawdbot change its name, and what did it eventually become?"
+  },
+  {
+    "id": "g002",
+    "input": "What messaging platforms and channels does Moltbot support?"
+  },
+  {
+    "id": "g003",
+    "input": "What are the minimum and recommended hardware requirements to run Moltbot?"
+  },
+  {
+    "id": "g004",
+    "input": "How does Moltbot compare to ChatGPT and Claude in terms of features?"
+  },
+  {
+    "id": "g005",
+    "input": "What LLM providers and models can Moltbot use?"
+  },
+  {
+    "id": "g006",
+    "input": "How fast did Moltbot grow in popularity on GitHub?"
+  },
+  {
+    "id": "g007",
+    "input": "What deployment options are available for Moltbot, and what are the tradeoffs between local and cloud hosting?"
+  },
+  {
+    "id": "g008",
+    "input": "What did security experts say about the risks of running Moltbot?"
+  },
+  {
+    "id": "g009",
+    "input": "What's the typical monthly cost of running Moltbot?"
+  },
+  {
+    "id": "g010",
+    "input": "What is the ClawdHub skills marketplace and what categories of skills does it offer?"
+  }
+]

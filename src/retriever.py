@@ -2,10 +2,10 @@ from src.custom_class import MyEnsembleretriever
 from src.vector_store import hybrid_retriever
 
 
-def get_retriever() -> MyEnsembleretriever:
+def get_retriever(k: int = 3) -> MyEnsembleretriever:
     """Return the Ensemble retriever backed by Chroma."""
 
-    retriever = hybrid_retriever()
+    retriever = hybrid_retriever(k=k)
 
     return retriever
 

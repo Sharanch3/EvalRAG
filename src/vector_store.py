@@ -52,7 +52,7 @@ def _get_bm25() -> MyBM25Retriever:
     return _bm25_instance
 
 
-def pdf_loader(file_path: str | Path, chunk_size: int = 600, chunk_overlap: int = 50) -> List[Document]:
+def pdf_loader(file_path: str | Path, chunk_size: int = 500, chunk_overlap: int = 50) -> List[Document]:
 
     loader = PyMuPDF4LLMLoader(file_path=file_path, mode="page", extract_images=False)
 
@@ -78,7 +78,7 @@ def ingest_to_vs(file_path: str) -> None:
     _bm25_instance = None
 
 
-def hybrid_retriever() -> MyEnsembleretriever:
+def hybrid_retriever(k: int = 3) -> MyEnsembleretriever:
     """
     Return sparce and dense represenataion retrieval. Hybrid search
 
@@ -93,15 +93,12 @@ def hybrid_retriever() -> MyEnsembleretriever:
 
     bm25_retriever = _get_bm25()
 
-    return MyEnsembleretriever(retrievers=[mmr_retriever, bm25_retriever], weights=[0.6, 0.4], k=3)
-
-
+    return MyEnsembleretriever(retrievers=[mmr_retriever, bm25_retriever], weights=[0.6, 0.4], k=k)
 
 
 if __name__ == "__main__":
-
     # Ingest once
-    ingest_to_vs(file_path= Path("data/Openclaw_Research_Report.pdf"))
+    ingest_to_vs(file_path=Path("data/Openclaw_Research_Report.pdf"))
 
     # Retriever
     retriever = hybrid_retriever()
@@ -118,8 +115,3 @@ if __name__ == "__main__":
         print("Content:")
         print(doc.page_content)
         print("\n")
-
-
-
-
-

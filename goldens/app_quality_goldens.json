@@ -1,0 +1,52 @@
+[
+  {
+    "id": "g001",
+    "input": "What core agentic actions can Moltbot actually perform, beyond just chatting?",
+    "expected_output": "Moltbot executes real-world tasks rather than just generating text suggestions. It can execute shell commands and terminal operations, run and debug code with iterative refinement, manage calendars and send automated reminders, control browser automation for web scraping and interaction, send and manage emails across multiple accounts, read/write/organize local filesystem operations, and integrate with 50+ third-party services and platforms."
+  },
+  {
+    "id": "g002",
+    "input": "What is Moltbot's Gateway architecture and what does it do?",
+    "expected_output": "Moltbot uses a Gateway control plane design that acts as its central nervous system. It consists of a Gateway Daemon that runs persistently on the host machine managing all connections and state, a WebSocket Control Plane handling real-time communication between components, Channel Connectors interfacing with messaging platforms via APIs and protocols, Session Management maintaining isolated sessions with context and history, and Tool Orchestration coordinating execution of skills and system commands. This architecture also allows iOS/Android nodes to pair with the central Gateway and execute device-specific actions like camera capture, screen recording, and notifications."
+  },
+  {
+    "id": "g003",
+    "input": "How does Moltbot store data and credentials, and why is that a security concern?",
+    "expected_output": "Moltbot persists all data locally on the user's filesystem using plaintext Markdown and JSON files, including configuration files in ~/.moltbot/config/, session histories and conversation logs, API keys and credentials, skill definitions and custom tools, and user preferences in a Soul.md personality file. This is a security concern because credentials (LLM API keys, messaging bot tokens, OAuth tokens, database connection strings, SSH keys, and service account credentials) are stored with no encryption at rest, meaning any process with read access to the user's files can extract all secrets. Real-world exposures included a Notion token exposing an entire healthcare company's documentation, a Kubernetes certificate providing privileged cluster access at a fintech company, and 181 unique secrets found in public Moltbot repositories, 65 of which were still valid."
+  },
+  {
+    "id": "g004",
+    "input": "Describe the malicious skill proof-of-concept that exposed supply chain risk in the ClawdHub marketplace.",
+    "expected_output": "Security researchers uploaded a malicious skill to the ClawdHub marketplace as a proof of concept, and it achieved a #1 ranking. Within 8 hours, 16 developers across 7 countries downloaded it. The skill was capable of executing remote commands, exfiltrating sensitive data, establishing persistent backdoors, and spreading to connected systems. This incident highlighted that there is no rigorous code review or security audit process for community-submitted skills, meaning users install third-party code with full system access based only on trust and popularity."
+  },
+  {
+    "id": "g005",
+    "input": "What media outlets covered Moltbot's viral rise, and how did influencers contribute to its growth?",
+    "expected_output": "Moltbot received coverage from Forbes, Wired, Bloomberg, Ars Technica, The Register, Mashable, and DigitalOcean's blog, reaching mainstream business media beyond the technical press. It also trended on Hacker News, Reddit, and Twitter/X, and was covered by tech YouTubers. High-profile endorsements from tech leaders accelerated awareness, including Andrej Karpathy (former Tesla AI lead) and David Sacks (tech investor), and MacStories featured it as the 'future of personal AI assistants.'"
+  },
+  {
+    "id": "g006",
+    "input": "What positive experiences have long-term Moltbot users reported?",
+    "expected_output": "Long-term users report transformative productivity gains. A tea business owner (Dan Peguine) said he became 'truly obsessed' and used Moltbot to run his entire business operations, including inventory, customer communications, and order processing. Developers report fixing code and opening pull requests remotely (one from a hairdresser appointment) while Moltbot managed multiple Claude Code instances for them. Users also value it as a 'second brain' for offloading and retrieving ideas, and a product manager praised a competitive research report it emailed as accurate, well-structured, and actionable. Users also appreciate its genuine proactivity, such as unprompted daily summaries of upcoming tasks and events."
+  },
+  {
+    "id": "g007",
+    "input": "What criticisms do long-term users have about Moltbot's code quality and setup?",
+    "expected_output": "Long-term users consistently describe the codebase as 'vibe-coded,' calling it a pet project without a serious engineering approach, despite the tool being genuinely useful. Users report needing to configure 'dozens and dozens of API keys' to get it working, and that it requires comfort managing services on one's own infrastructure. Other complaints include frustration with asynchronous response latency on messaging apps like Telegram, concerns about impersonation when granting the AI broad delegated access, and mixed documentation quality described as 'CLI-driven and technical' but inconsistent due to rapid development."
+  },
+  {
+    "id": "g008",
+    "input": "What is the report's overall rating and verdict on Moltbot?",
+    "expected_output": "The report gives Moltbot an overall rating of 3.5 out of 5. Strengths include revolutionary autonomous capabilities, privacy-first local architecture, an extensible open-source ecosystem, active community and development, multi-platform messaging integration, and cost-effectiveness versus commercial alternatives. Weaknesses include serious security vulnerabilities, high technical complexity, immature codebase quality, significant setup burden, limited documentation consistency, and no commercial support. The verdict is that Moltbot delivers on its promise of proactive, autonomous AI assistance but requires sophisticated users who accept its risks, representing 'the future of personal AI... arrived prematurely, before necessary security and usability maturity.'"
+  },
+  {
+    "id": "g009",
+    "input": "Who is Moltbot best suited for, and who should avoid it, according to the report?",
+    "expected_output": "Ideal candidates include developers and technical professionals comfortable with self-hosting, privacy-conscious individuals handling sensitive personal or business data, power users wanting deep system integration and customization, small businesses with technical leadership seeking cost-effective automation, and researchers exploring agentic AI architectures. The report recommends that non-technical users expecting consumer-product polish, regulated industries without dedicated security expertise, organizations unable to accept experimental software risk, users requiring enterprise support and SLAs, and individuals uncomfortable with security responsibility should avoid it."
+  },
+  {
+    "id": "g010",
+    "input": "What risk mitigation strategies does the report recommend for organizations deploying Moltbot?",
+    "expected_output": "The report recommends starting with an isolated test environment separate from production systems, implementing a security baseline (network isolation with strict firewall rules, a dedicated low-privilege user account, external secret management, comprehensive logging and monitoring, and regular security audits), expanding capabilities gradually by beginning with read-only skills before enabling write operations, vetting all community skill code before installation and maintaining an approved skill whitelist, and establishing an incident response plan for credential rotation and compromise recovery. It also recommends technical controls like deploying behind Tailscale or a VPN, using external secret management systems such as HashiCorp Vault or AWS Secrets Manager, and operational/governance controls such as documented approval workflows, periodic access reviews, and clear data classification policies."
+  }
+]

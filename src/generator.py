@@ -9,7 +9,7 @@ from langchain_openai import ChatOpenAI
 load_dotenv()
 
 
-model = ChatOpenAI(name="gpt-4o-mini", temperature=0.1, api_key=os.getenv("OPENAI_API_KEY"))
+model = ChatOpenAI(name="gpt-4o-mini", temperature=0, api_key=os.getenv("OPENAI_API_KEY"))
 
 
 prompt = ChatPromptTemplate.from_template(

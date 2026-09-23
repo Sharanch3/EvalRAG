@@ -1,5 +1,5 @@
 import os
-from typing import List
+from typing import Iterator, List
 
 from dotenv import load_dotenv
 from langchain_core.output_parsers import StrOutputParser
@@ -144,3 +144,12 @@ def generator(question: str, context: List[str]) -> str:
     context_text = "\n".join(context)
 
     return chain.invoke({"question": question, "context": context_text})
+
+
+def stream_generator(question: str, context: List[str]) -> Iterator[str]:
+
+    context_text = "\n".join(context)
+
+    for token in chain.stream({"question": question, "context": context_text}):
+        if token:
+            yield token
